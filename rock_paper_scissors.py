@@ -27,7 +27,5 @@ def rules(users_choice, computers_choice):
 		return f"You picked {users_choice} and the computer picked {computers_choice}, you win!!"
 
 options = ['Rock', 'Paper', 'Scissors']
-comp_choice = random.choice(options)
 
-rules(val,comp_choice)
 
