@@ -1,15 +1,19 @@
 from flask import Flask, redirect, url_for, render_template, request
 from rock_paper_scissors import *
+import random
 
 app = Flask(__name__)
+
 
 @app.route("/")
 def index():
 	return redirect(url_for('game'))
 
+
 @app.route("/game/")
 def game():
 	return render_template("rock_scissors_paper.html")
+
 
 @app.route("/decision", methods=['GET', 'POST'])
 def decision():
@@ -28,3 +32,7 @@ def who():
 @app.route("/hi/<username>")
 def greet(username):
 	return f"Hi there, {username}!"
+
+
+if __name__ == '__main__':
+	app.run(debug=True)
