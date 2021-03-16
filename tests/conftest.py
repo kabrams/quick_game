@@ -1,6 +1,8 @@
 import pytest
+import sys
+sys.path.insert(0, '/Users/kabrams/ken_projects/quick_game')
+import app as flask_app
 
-from app import app as flask_app
 
 
 @pytest.fixture
