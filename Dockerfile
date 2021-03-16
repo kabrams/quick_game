@@ -1,4 +1,4 @@
-FROM node:python
+FROM python:3
 
 WORKDIR /usr/src/app
 
