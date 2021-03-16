@@ -2,6 +2,7 @@ pipeline {
     agent { dockerfile true }
      environment {
         PATH = "$PATH:/usr/local/bin"
+        sh = "$PATH:/bin/sh"
     }
     stages {
         stage('Checkout code'){
@@ -11,8 +12,8 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'node --version'
-                sh 'svn --version'
+                sh 'docker build -t node .'
+                sh 'docker run -it --name test_app_py node'
             }
         }
     }
