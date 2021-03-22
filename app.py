@@ -1,5 +1,5 @@
 from flask import Flask, redirect, url_for, render_template, request
-from rock_paper_scissors import *
+from . import rock_paper_scissors
 import random
 
 app = Flask(__name__)
