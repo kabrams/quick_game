@@ -9,6 +9,12 @@ pipeline {
                 checkout scm
             }
         }
+        stage('Test') {
+            steps {
+                echo 'Hello World'
+                sh 'ls'
+            }
+        }
     }
  }
 
