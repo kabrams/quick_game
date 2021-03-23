@@ -9,11 +9,6 @@ pipeline {
                 checkout scm
             }
         }
-        stage('Test') {
-            steps {
-                sh 'docker run -it --rm --name my-running-app -v /Users/kabrams/ken_projects/quick_game:/usr/src/app -w /usr/src/app my-python-app'
-            }
-        }
     }
  }
 
