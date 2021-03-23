@@ -11,8 +11,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'node --version'
-                sh 'svn --version'
+                sh 'docker run -it --rm --name my-running-app -v /Users/kabrams/ken_projects/quick_game:/usr/src/app -w /usr/src/app my-python-app'
             }
         }
     }
